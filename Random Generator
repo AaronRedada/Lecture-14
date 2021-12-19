@@ -1,0 +1,25 @@
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main()
+{
+	int randArr[1000];
+	srand(4);
+
+	for (int x = 0; x < 1000; x++) {
+		randArr[x] = rand() % 100;
+		cout << randArr[x] << endl;
+	}
+
+	int six = 0;
+	for (int y = 0; y < 1000; y++) {
+		int z = randArr[y];
+		if (z == 6) {
+			six = six + 1;
+		}
+	}
+	cout << endl;
+	cout << "The number six appears " << six << " times on the array";
+
+}
