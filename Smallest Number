@@ -1,0 +1,29 @@
+#include <iostream>
+#include <array>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int x;
+    float arr[10];
+
+    cout << "Enter total number of elements(1 to 10): ";
+    cout << endl;
+
+    for (x = 0; x < 10; ++x)
+    {
+        cout << "Enter input no. " << x + 1 << " : ";
+        cin >> arr[x];
+    }
+
+    for (x = 1; x < 10; ++x)
+    {
+        if (arr[0] > arr[x])
+            arr[0] = arr[x];
+    }
+    cout << endl;
+    cout << "The smallest number in the array is " << arr[0];
+
+    return 0;
+}
